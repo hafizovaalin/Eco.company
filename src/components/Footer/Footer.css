@@ -1,0 +1,151 @@
+.footer {
+    background-color: var(--Neutral-Black); /* Цвет из скриншота */
+    color: var(--Neutral-Silver); /* Цвет текста */
+    padding: 64px 165px;
+    display: flex;
+  }
+  
+  .footer-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 125px;
+  }
+  
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    width: fit-content;
+  }
+
+  .text-container {
+    max-width: 350px; /* Ограничение ширины текста */
+    text-align: left;
+    width: 100%;
+    display: block; /* Убеждаемся, что он блочный */
+    margin-bottom: 8px;
+  }
+  
+  .text-container p:not(:last-child) {
+    margin-bottom: 8px; /* Добавляет 8px только между строками */
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 16px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    /* background-color: var(--Neutral-White); */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .footer-column h3 {
+    color: var(--Neutral-White); /* Делаем заголовки в футере цветом Primary */
+  }
+  
+
+  @media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Колонки в один столбец */
+        gap: 44px; /* Отступ между колонками */
+        justify-items: left; /* Выравниваем контент по центру */
+    }
+
+    .footer-column {
+        width: 100%; /* Растягиваем на всю ширину */
+        align-items: left; /* Центрируем элементы */
+        text-align: left; /* Выравниваем текст */
+    }
+
+    .social-icons {
+        justify-content: left; /* Центрируем иконки */
+    }
+
+    .footer-input-container {
+        width: 100%; /* Растягиваем поле ввода */
+        max-width: 320px; /* Чтобы не было слишком широким */
+    }
+    .links-container {
+        flex-direction: column; /* Переводим в колонку */
+        gap: 44px;
+        align-items: flex-start; /* Выравниваем по левому краю */
+        width: 100%;
+    }
+}
+@media (max-width: 1200px) {
+    .links-container {
+        justify-content: flex-start; /* Выравнивание по левому краю */
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+.links-container {
+    display: flex;
+     /* Позволяет элементам переноситься */
+    gap: 30px;
+    justify-content: space-between; /* Равномерное распределение */
+    max-width: 100%;
+}
+
+.footer-column-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.footer-title-1 {
+    color: var(--Neutral-White);
+    margin-bottom: 12px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--Neutral-Silver);
+    width: 160px !important;
+}
+
+.footer-input-container {
+    position: relative;
+    width: 100%;
+    width: 250px !important;
+}
+
+.footer-input {
+    width: 100%;
+    padding: 12px 50px 12px 12px;
+    border-radius: 10px;
+    background-color:  rgba(255, 255, 255, 0.1);
+    color: var(--Neutral-White);
+    border: none;
+    outline: none;
+}
+
+.footer-button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--Neutral-White);
+}
+
+  
